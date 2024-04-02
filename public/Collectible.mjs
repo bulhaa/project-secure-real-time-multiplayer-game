@@ -1,6 +1,16 @@
 class Collectible {
-  constructor({x, y, value, id}) {
+  constructor({x, y, value, id, ctx}) {
+    this.position = {x, y};
+    this.value = value;
+    this.id = id;
+    this.ctx = ctx;
+    this.width = 20;
+    this.height = 20;
+  }
 
+  draw() {
+    this.ctx.fillStyle = "#acd157";
+    this.ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
 }
